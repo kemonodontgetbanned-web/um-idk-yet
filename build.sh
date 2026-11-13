@@ -1,0 +1,26 @@
+#!/bin/sh
+set -e
+cd "$(dirname "$0")"
+g++ -O2 -Wall -Isrc -I/home/idom/int3-kernel/include -o lx_dump \
+  src/main.cpp \
+  src/config.cpp \
+  src/rtti.cpp \
+  src/roblox.cpp \
+  src/scanner.cpp \
+  src/dump/static.cpp \
+  src/dump/general.cpp \
+  src/dump/datamodel.cpp \
+  src/dump/players.cpp \
+  src/dump/camera.cpp \
+  src/dump/humanoid.cpp \
+  src/dump/parts.cpp \
+  src/dump/world.cpp \
+  src/dump/mouse.cpp \
+  src/dump/workspace.cpp \
+  src/dump/animation.cpp \
+  src/dump/lighting.cpp \
+  src/dump/interactables.cpp \
+  src/dump/luau.cpp \
+  src/dump/flags.cpp \
+  src/dump/diag.cpp
+echo "built ./lx_dump"
